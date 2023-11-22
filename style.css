@@ -135,8 +135,8 @@ body {
   }
   .answer-container {
     gap: 15px;
-    padding: 25px 20px;
-    font-size: 18px;
+    padding: 20px 10px;
+    font-size: 19px;
   }
   .answer-container input {
     height: 16px;
