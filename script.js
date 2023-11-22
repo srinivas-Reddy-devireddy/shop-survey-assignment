@@ -29,6 +29,9 @@ const questions = [
 let currentQuestion = 0;
 let answers = [];
 
+
+
+
 function startSurvey() {
   document.getElementById("welcome-screen").style.display = "none";
 
@@ -66,12 +69,14 @@ function generateRatingOptions(max) {
   return optionsHTML;
 }
 
+
+
 function submitSurvey() {
   saveSurveyData();
   document.getElementById("question-screen").style.display = "none";
   document.getElementById("confirmation-screen").style.display = "none";
   document.getElementById("thank-you-screen").style.display = "block";
-  confirm("press a button OK or Cancel");
+  confirm('press a button OK or Cancel')
   setTimeout(() => {
     resetSurvey();
   }, 5000); // Show welcome screen after 5 seconds
@@ -82,7 +87,8 @@ function cancelSubmit() {
   document.getElementById("confirmation-screen").style.display = "none";
   resetSurvey(); // Continue the survey
 }
-
+document.getElementById("confirmation-screen").style.display = "none";
+document.getElementById("thank-you-screen").style.display = "none";
 function resetSurvey() {
   ``;
   currentQuestion = 0;
@@ -117,6 +123,8 @@ function prevQuestion() {
     showQuestion();
   }
 }
+
+
 
 function getAnswer() {
   if (questions[currentQuestion].type === "rating") {
